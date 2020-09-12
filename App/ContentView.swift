@@ -3,8 +3,15 @@ import SwiftUI
 struct ContentView: View {
 	let articles = ["one", "two", "three"]
 	var body: some View {
-		Text("Hello, world!")
-			.padding()
+		NavigationView {
+			List(articles, id: \.self) { article in
+				NavigationLink(destination: Text(article)) {
+					Text(article)
+				}
+			}
+			Color.clear
+		}
+		.navigationViewStyle(DoubleColumnNavigationViewStyle())
 	}
 }
 
