@@ -13,6 +13,8 @@
 		C954D84D250C8B5800488BCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D838250C8B5700488BCF /* ContentView.swift */; };
 		C954D86A250C8DFD00488BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C954D866250C8DFD00488BCF /* Assets.xcassets */; };
 		C954D86B250C8DFD00488BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C954D866250C8DFD00488BCF /* Assets.xcassets */; };
+		C954D871250C8F9300488BCF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D870250C8F9300488BCF /* Model.swift */; };
+		C954D872250C8F9300488BCF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D870250C8F9300488BCF /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		C954D867250C8DFD00488BCF /* macOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C954D868250C8DFD00488BCF /* macOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "macOS-Info.plist"; sourceTree = "<group>"; };
 		C954D869250C8DFD00488BCF /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
+		C954D870250C8F9300488BCF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			children = (
 				C954D838250C8B5700488BCF /* ContentView.swift */,
 				C954D837250C8B5700488BCF /* CwlFeedReaderApp.swift */,
+				C954D870250C8F9300488BCF /* Model.swift */,
 				C954D865250C8DFD00488BCF /* Resources */,
 			);
 			path = App;
@@ -179,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C954D871250C8F9300488BCF /* Model.swift in Sources */,
 				C954D84C250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84A250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
 			);
@@ -188,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C954D872250C8F9300488BCF /* Model.swift in Sources */,
 				C954D84D250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84B250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
 			);
