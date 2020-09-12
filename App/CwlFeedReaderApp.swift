@@ -4,7 +4,7 @@ import SwiftUI
 struct CwlFeedReaderApp: App {
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			ContentView(model: Model())
 		}
 	}
 }

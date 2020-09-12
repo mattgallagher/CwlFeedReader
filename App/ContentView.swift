@@ -1,12 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
-	let articles = ["one", "two", "three"]
+	@ObservedObject var model: Model
+	
 	var body: some View {
 		NavigationView {
-			List(articles, id: \.self) { article in
-				NavigationLink(destination: Text(article)) {
-					Text(article)
+			List(model.feed?.items ?? [], id: \.url) { row in
+				NavigationLink(destination: Text(row.content)) {
+					Text(row.title)
 				}
 			}
 			Color.clear
@@ -17,6 +18,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		ContentView(model: Model())
 	}
 }
