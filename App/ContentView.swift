@@ -6,10 +6,13 @@ struct ContentView: View {
 	var body: some View {
 		NavigationView {
 			List(model.feed?.items ?? [], id: \.url) { row in
-				NavigationLink(destination: Text(row.content)) {
+				NavigationLink(destination: DetailView(row: row)) {
 					Text(row.title)
 				}
 			}
+			.navigationTitle(Text("Articles"))
+			.navigationBarTitleDisplayModeIfAvailable(.inline)
+			
 			Color.clear
 		}
 		.navigationViewStyle(DoubleColumnNavigationViewStyle())

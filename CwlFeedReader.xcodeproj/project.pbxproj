@@ -15,6 +15,12 @@
 		C954D86B250C8DFD00488BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C954D866250C8DFD00488BCF /* Assets.xcassets */; };
 		C954D871250C8F9300488BCF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D870250C8F9300488BCF /* Model.swift */; };
 		C954D872250C8F9300488BCF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D870250C8F9300488BCF /* Model.swift */; };
+		C954D874250C924A00488BCF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D873250C924A00488BCF /* DetailView.swift */; };
+		C954D875250C924A00488BCF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D873250C924A00488BCF /* DetailView.swift */; };
+		C954D877250C92C500488BCF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D876250C92C500488BCF /* WebView.swift */; };
+		C954D878250C92C500488BCF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D876250C92C500488BCF /* WebView.swift */; };
+		C954D87A250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */; };
+		C954D87B250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,9 @@
 		C954D868250C8DFD00488BCF /* macOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "macOS-Info.plist"; sourceTree = "<group>"; };
 		C954D869250C8DFD00488BCF /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
 		C954D870250C8F9300488BCF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C954D873250C924A00488BCF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C954D876250C92C500488BCF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformCompatibility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,11 @@
 			children = (
 				C954D838250C8B5700488BCF /* ContentView.swift */,
 				C954D837250C8B5700488BCF /* CwlFeedReaderApp.swift */,
+				C954D873250C924A00488BCF /* DetailView.swift */,
 				C954D870250C8F9300488BCF /* Model.swift */,
 				C954D865250C8DFD00488BCF /* Resources */,
+				C954D876250C92C500488BCF /* WebView.swift */,
+				C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -183,7 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C954D87A250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */,
 				C954D871250C8F9300488BCF /* Model.swift in Sources */,
+				C954D877250C92C500488BCF /* WebView.swift in Sources */,
+				C954D874250C924A00488BCF /* DetailView.swift in Sources */,
 				C954D84C250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84A250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
 			);
@@ -193,7 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C954D87B250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */,
 				C954D872250C8F9300488BCF /* Model.swift in Sources */,
+				C954D878250C92C500488BCF /* WebView.swift in Sources */,
+				C954D875250C924A00488BCF /* DetailView.swift in Sources */,
 				C954D84D250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84B250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
 			);
