@@ -5,22 +5,21 @@ struct ContentView: View {
 	
 	var body: some View {
 		NavigationView {
-			List(model.feed?.items ?? [], id: \.url) { row in
-				NavigationLink(destination: DetailView(row: row)) {
-					Text(row.title)
-				}
-			}
-			.navigationTitle(Text("Articles"))
-			.navigationBarTitleDisplayModeIfAvailable(.inline)
+			ListView(model: model)
 			
 			Color.clear
 		}
 		.navigationViewStyle(DoubleColumnNavigationViewStyle())
+		.alert(item: $model.error) { error in
+			Alert(title: Text(verbatim: error.localizedDescription))
+		}
 	}
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
 		ContentView(model: Model())
 	}
 }
+#endif

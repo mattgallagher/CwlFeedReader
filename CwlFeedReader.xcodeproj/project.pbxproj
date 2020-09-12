@@ -21,6 +21,10 @@
 		C954D878250C92C500488BCF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D876250C92C500488BCF /* WebView.swift */; };
 		C954D87A250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */; };
 		C954D87B250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */; };
+		C98E78A8250C93FD0015CD9B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78A7250C93FD0015CD9B /* ListView.swift */; };
+		C98E78A9250C93FD0015CD9B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78A7250C93FD0015CD9B /* ListView.swift */; };
+		C98E78AB250C94B20015CD9B /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78AA250C94B20015CD9B /* IdentifiableError.swift */; };
+		C98E78AC250C94B20015CD9B /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78AA250C94B20015CD9B /* IdentifiableError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,8 @@
 		C954D873250C924A00488BCF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		C954D876250C92C500488BCF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformCompatibility.swift"; sourceTree = "<group>"; };
+		C98E78A7250C93FD0015CD9B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C98E78AA250C94B20015CD9B /* IdentifiableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +76,10 @@
 				C954D838250C8B5700488BCF /* ContentView.swift */,
 				C954D837250C8B5700488BCF /* CwlFeedReaderApp.swift */,
 				C954D873250C924A00488BCF /* DetailView.swift */,
+				C98E78A7250C93FD0015CD9B /* ListView.swift */,
 				C954D870250C8F9300488BCF /* Model.swift */,
 				C954D865250C8DFD00488BCF /* Resources */,
-				C954D876250C92C500488BCF /* WebView.swift */,
-				C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */,
+				C9868841258626B1006B982A /* Utilities */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -96,6 +102,16 @@
 				C954D867250C8DFD00488BCF /* macOS.entitlements */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9868841258626B1006B982A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C98E78AA250C94B20015CD9B /* IdentifiableError.swift */,
+				C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */,
+				C954D876250C92C500488BCF /* WebView.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +214,8 @@
 				C954D87A250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */,
 				C954D871250C8F9300488BCF /* Model.swift in Sources */,
 				C954D877250C92C500488BCF /* WebView.swift in Sources */,
+				C98E78A8250C93FD0015CD9B /* ListView.swift in Sources */,
+				C98E78AB250C94B20015CD9B /* IdentifiableError.swift in Sources */,
 				C954D874250C924A00488BCF /* DetailView.swift in Sources */,
 				C954D84C250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84A250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
@@ -211,6 +229,8 @@
 				C954D87B250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */,
 				C954D872250C8F9300488BCF /* Model.swift in Sources */,
 				C954D878250C92C500488BCF /* WebView.swift in Sources */,
+				C98E78A9250C93FD0015CD9B /* ListView.swift in Sources */,
+				C98E78AC250C94B20015CD9B /* IdentifiableError.swift in Sources */,
 				C954D875250C924A00488BCF /* DetailView.swift in Sources */,
 				C954D84D250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84B250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
