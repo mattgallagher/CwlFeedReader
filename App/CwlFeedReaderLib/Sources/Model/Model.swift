@@ -1,39 +1,40 @@
 import Foundation
+import Toolbox
 
-struct Feed: Codable {
-	let items: [Article]
+public struct Feed: Codable {
+	public let items: [Article]
 }
 
-struct Article: Codable {
-	let url: URL
-	let title: String
-	let content: String
+public struct Article: Codable {
+	public let url: URL
+	public let title: String
+	public let content: String
 
 	enum CodingKeys: String, CodingKey {
 		case url, title, content = "content_html"
 	}
 }
 
-class Model: ObservableObject {
-	@Published var feed: Feed?
-	@Published var error: IdentifiableError?
-	@Published var isReadStatuses: [URL: Bool]
+public class Model: ObservableObject {
+	@Published public private(set) var feed: Feed?
+	@Published public var error: IdentifiableError?
+	@Published public private(set) var isReadStatuses: [URL: Bool]
 	
 	var task: URLSessionDataTask?
-	init() {
+	public init() {
 		self.isReadStatuses = UserDefaults.standard.data(forKey: "isReadStatuses")
 			.flatMap { try? JSONDecoder().decode([URL: Bool].self, from: $0) } ?? [:]
 		reload()
 	}
 	
-	func setIsRead(_ value: Bool, url: URL) {
+	public func setIsRead(_ value: Bool, url: URL) {
 		var statuses = isReadStatuses
 		statuses[url] = value
 		isReadStatuses = statuses
 		UserDefaults.standard.set(try? JSONEncoder().encode(isReadStatuses), forKey: "isReadStatuses")
 	}
 	
-	func reload() {
+	public func reload() {
 		let request = URLRequest(url: URL(string: "https://www.cocoawithlove.com/feed.json")!)
 		task = URLSession.shared.dataTask(with: request) { data, response, error in
 			do {

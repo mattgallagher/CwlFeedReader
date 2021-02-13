@@ -1,4 +1,6 @@
+import Model
 import SwiftUI
+import ViewToolbox
 
 struct DetailView: View {
 	@ObservedObject var model: Model

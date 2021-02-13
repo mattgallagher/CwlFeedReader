@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,18 +13,12 @@
 		C954D84D250C8B5800488BCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D838250C8B5700488BCF /* ContentView.swift */; };
 		C954D86A250C8DFD00488BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C954D866250C8DFD00488BCF /* Assets.xcassets */; };
 		C954D86B250C8DFD00488BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C954D866250C8DFD00488BCF /* Assets.xcassets */; };
-		C954D871250C8F9300488BCF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D870250C8F9300488BCF /* Model.swift */; };
-		C954D872250C8F9300488BCF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D870250C8F9300488BCF /* Model.swift */; };
 		C954D874250C924A00488BCF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D873250C924A00488BCF /* DetailView.swift */; };
 		C954D875250C924A00488BCF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D873250C924A00488BCF /* DetailView.swift */; };
-		C954D877250C92C500488BCF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D876250C92C500488BCF /* WebView.swift */; };
-		C954D878250C92C500488BCF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D876250C92C500488BCF /* WebView.swift */; };
-		C954D87A250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */; };
-		C954D87B250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */; };
+		C986885325862FF4006B982A /* CwlFeedReaderLib in Frameworks */ = {isa = PBXBuildFile; productRef = C986885225862FF4006B982A /* CwlFeedReaderLib */; };
+		C986885525862FFA006B982A /* CwlFeedReaderLib in Frameworks */ = {isa = PBXBuildFile; productRef = C986885425862FFA006B982A /* CwlFeedReaderLib */; };
 		C98E78A8250C93FD0015CD9B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78A7250C93FD0015CD9B /* ListView.swift */; };
 		C98E78A9250C93FD0015CD9B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78A7250C93FD0015CD9B /* ListView.swift */; };
-		C98E78AB250C94B20015CD9B /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78AA250C94B20015CD9B /* IdentifiableError.swift */; };
-		C98E78AC250C94B20015CD9B /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E78AA250C94B20015CD9B /* IdentifiableError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +30,9 @@
 		C954D867250C8DFD00488BCF /* macOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C954D868250C8DFD00488BCF /* macOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "macOS-Info.plist"; sourceTree = "<group>"; };
 		C954D869250C8DFD00488BCF /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
-		C954D870250C8F9300488BCF /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C954D873250C924A00488BCF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		C954D876250C92C500488BCF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PlatformCompatibility.swift"; sourceTree = "<group>"; };
+		C986884825862F15006B982A /* CwlFeedReaderLib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CwlFeedReaderLib; path = App/CwlFeedReaderLib; sourceTree = "<group>"; };
 		C98E78A7250C93FD0015CD9B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		C98E78AA250C94B20015CD9B /* IdentifiableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C986885325862FF4006B982A /* CwlFeedReaderLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C986885525862FFA006B982A /* CwlFeedReaderLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				C954D836250C8B5700488BCF /* App */,
+				C986884825862F15006B982A /* CwlFeedReaderLib */,
 				C954D83F250C8B5800488BCF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,9 +71,7 @@
 				C954D837250C8B5700488BCF /* CwlFeedReaderApp.swift */,
 				C954D873250C924A00488BCF /* DetailView.swift */,
 				C98E78A7250C93FD0015CD9B /* ListView.swift */,
-				C954D870250C8F9300488BCF /* Model.swift */,
 				C954D865250C8DFD00488BCF /* Resources */,
-				C9868841258626B1006B982A /* Utilities */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -104,16 +96,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C9868841258626B1006B982A /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				C98E78AA250C94B20015CD9B /* IdentifiableError.swift */,
-				C954D879250C932C00488BCF /* View+PlatformCompatibility.swift */,
-				C954D876250C92C500488BCF /* WebView.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +112,9 @@
 			dependencies = (
 			);
 			name = "CwlFeedReader (iOS)";
+			packageProductDependencies = (
+				C986885225862FF4006B982A /* CwlFeedReaderLib */,
+			);
 			productName = "CwlFeedReader (iOS)";
 			productReference = C954D83E250C8B5800488BCF /* CwlFeedReader.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +132,9 @@
 			dependencies = (
 			);
 			name = "CwlFeedReader (macOS)";
+			packageProductDependencies = (
+				C986885425862FFA006B982A /* CwlFeedReaderLib */,
+			);
 			productName = "CwlFeedReader (macOS)";
 			productReference = C954D846250C8B5800488BCF /* CwlFeedReader.app */;
 			productType = "com.apple.product-type.application";
@@ -158,7 +146,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					C954D83D250C8B5800488BCF = {
 						CreatedOnToolsVersion = 12.0;
@@ -211,11 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C954D87A250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */,
-				C954D871250C8F9300488BCF /* Model.swift in Sources */,
-				C954D877250C92C500488BCF /* WebView.swift in Sources */,
 				C98E78A8250C93FD0015CD9B /* ListView.swift in Sources */,
-				C98E78AB250C94B20015CD9B /* IdentifiableError.swift in Sources */,
 				C954D874250C924A00488BCF /* DetailView.swift in Sources */,
 				C954D84C250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84A250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
@@ -226,11 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C954D87B250C932C00488BCF /* View+PlatformCompatibility.swift in Sources */,
-				C954D872250C8F9300488BCF /* Model.swift in Sources */,
-				C954D878250C92C500488BCF /* WebView.swift in Sources */,
 				C98E78A9250C93FD0015CD9B /* ListView.swift in Sources */,
-				C98E78AC250C94B20015CD9B /* IdentifiableError.swift in Sources */,
 				C954D875250C924A00488BCF /* DetailView.swift in Sources */,
 				C954D84D250C8B5800488BCF /* ContentView.swift in Sources */,
 				C954D84B250C8B5800488BCF /* CwlFeedReaderApp.swift in Sources */,
@@ -402,6 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App/Resources/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S7YQ892G6G;
@@ -426,6 +407,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App/Resources/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S7YQ892G6G;
@@ -475,6 +457,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C986885225862FF4006B982A /* CwlFeedReaderLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CwlFeedReaderLib;
+		};
+		C986885425862FFA006B982A /* CwlFeedReaderLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CwlFeedReaderLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C954D832250C8B5700488BCF /* Project object */;
 }

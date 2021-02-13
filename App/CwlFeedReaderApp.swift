@@ -1,3 +1,4 @@
+import Model
 import SwiftUI
 
 @main
