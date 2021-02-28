@@ -24,6 +24,10 @@ let package = Package(
 		.target(
 			name: "ViewToolbox",
 			dependencies: ["Toolbox"]
+		),
+		.testTarget(
+			name: "ModelTests",
+			dependencies: ["Model", "Toolbox"]
 		)
 	]
 )
