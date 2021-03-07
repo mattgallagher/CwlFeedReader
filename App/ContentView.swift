@@ -18,9 +18,10 @@ struct ContentView: View {
 }
 
 #if DEBUG
+import MockServiceImplementations
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView(model: Model())
+		ContentView(model: Model(services: Services.mock))
 	}
 }
 #endif

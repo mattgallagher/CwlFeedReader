@@ -25,9 +25,10 @@ struct DetailView: View {
 }
 
 #if DEBUG
+import MockServiceImplementations
 struct DetailView_Previews: PreviewProvider {
 	static var previews: some View {
-		let model = Model()
+		let model = Model(services: Services.mock)
 		DetailView(model: model, article: model.feed!.items.first!)
 	}
 }

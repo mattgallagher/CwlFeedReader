@@ -1,15 +1,15 @@
+import MockServiceImplementations
 import Model
 import XCTest
 
 class ModelTests: XCTestCase {
-	let feedFirstURL = URL(string: "https://www.cocoawithlove.com/blog/swiftui-natural-pattern.html")!
+	let feedFirstURL = URL(string: "https://www.cocoawithlove.com/blog/twenty-two-short-tests-of-combine-part-3.html")!
 	
 	func testInit() {
-		// Given clean state
-		UserDefaults.standard.removeObject(forKey: "isReadStatuses")
+		// Given
 		
 		// When we init the model
-		let model = Model()
+		let model = Model(services: Services.mock)
 		
 		// Then all values should be `nil`
 		XCTAssertNil(model.isReadStatuses[feedFirstURL])
@@ -19,7 +19,7 @@ class ModelTests: XCTestCase {
 	
 	func testReload() {
 		// Given a newly inited model and an expectation that stops on the second feed value
-		let model = Model()
+		let model = Model(services: Services.mock)
 		let secondValue = expectation(description: "feed should emit 2 values.")
 		let cancellable = model.$feed
 			.dropFirst()
@@ -29,14 +29,13 @@ class ModelTests: XCTestCase {
 		wait(for: [secondValue], timeout: 30.0)
 		cancellable.cancel()
 		
-		// Then first feed URL should be SwiftUI natural pattern
+		// Then first feed URL should be the expected value
 		XCTAssertEqual(model.feed?.items.map(\.url).first, feedFirstURL)
 	}
 	
 	func testSetIsRead() {
-		// Given a clean model and an expectation that stops when we've saved 3 isReadStatuses values
-		UserDefaults.standard.removeObject(forKey: "isReadStatuses")
-		let model = Model()
+		// Given a newly inited model and an expectation that stops when we've saved 3 isReadStatuses values
+		let model = Model(services: Services.mock)
 		var isReadStatuses = [[URL: Bool]]()
 		let cancellable = model.$isReadStatuses
 			.prefix(3)

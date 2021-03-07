@@ -106,10 +106,12 @@
 				C954D83A250C8B5800488BCF /* Sources */,
 				C954D83B250C8B5800488BCF /* Frameworks */,
 				C954D83C250C8B5800488BCF /* Resources */,
+				C94892C925F59DC7004DDE40 /* Copy MockServiceImplementations bundle if Debug */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C9DE949B25EB3106003FEF83 /* PBXTargetDependency */,
 			);
 			name = "CwlFeedReader (iOS)";
 			packageProductDependencies = (
@@ -126,10 +128,12 @@
 				C954D842250C8B5800488BCF /* Sources */,
 				C954D843250C8B5800488BCF /* Frameworks */,
 				C954D844250C8B5800488BCF /* Resources */,
+				C94892D025F59FAB004DDE40 /* Copy MockServiceImplementations bundle if Debug */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C9DE949D25EB310B003FEF83 /* PBXTargetDependency */,
 			);
 			name = "CwlFeedReader (macOS)";
 			packageProductDependencies = (
@@ -194,6 +198,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C94892C925F59DC7004DDE40 /* Copy MockServiceImplementations bundle if Debug */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/CwlFeedReaderLib_MockServiceImplementations.bundle",
+			);
+			name = "Copy MockServiceImplementations bundle if Debug";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/CwlFeedReaderLib_MockServiceImplementations.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n  echo \"Copying ${SCRIPT_INPUT_FILE_0}\"\n  cp -Rf \"${SCRIPT_INPUT_FILE_0}\" \"${SCRIPT_OUTPUT_FILE_0}\"\nfi\n";
+		};
+		C94892D025F59FAB004DDE40 /* Copy MockServiceImplementations bundle if Debug */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/CwlFeedReaderLib_MockServiceImplementations.bundle",
+			);
+			name = "Copy MockServiceImplementations bundle if Debug";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/CwlFeedReaderLib_MockServiceImplementations.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n  echo \"Copying ${SCRIPT_INPUT_FILE_0}\"\n  cp -Rf \"${SCRIPT_INPUT_FILE_0}\" \"${SCRIPT_OUTPUT_FILE_0}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C954D83A250C8B5800488BCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,6 +265,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9DE949B25EB3106003FEF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C9DE949A25EB3106003FEF83 /* MockServiceImplementations */;
+		};
+		C9DE949D25EB310B003FEF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C9DE949C25EB310B003FEF83 /* MockServiceImplementations */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C954D850250C8B5800488BCF /* Debug */ = {
@@ -345,6 +403,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "${BUILT_PRODUCTS_DIR}/MockServiceImplementations.o";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoawithlove.CwlFeedReader;
 				PRODUCT_NAME = CwlFeedReader;
 				SDKROOT = iphoneos;
@@ -394,6 +453,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "${BUILT_PRODUCTS_DIR}/MockServiceImplementations.o";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoawithlove.CwlFeedReader;
 				PRODUCT_NAME = CwlFeedReader;
 				SDKROOT = macosx;
@@ -466,6 +526,14 @@
 		C986885425862FFA006B982A /* CwlFeedReaderLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CwlFeedReaderLib;
+		};
+		C9DE949A25EB3106003FEF83 /* MockServiceImplementations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MockServiceImplementations;
+		};
+		C9DE949C25EB310B003FEF83 /* MockServiceImplementations */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MockServiceImplementations;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

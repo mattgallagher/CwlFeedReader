@@ -27,9 +27,10 @@ struct ListView: View {
 }
 
 #if DEBUG
+import MockServiceImplementations
 struct ListView_Previews: PreviewProvider {
 	static var previews: some View {
-		let model = Model()
+		let model = Model(services: Services.mock)
 		ListView(model: model)
 	}
 }

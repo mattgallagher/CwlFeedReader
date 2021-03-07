@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import Toolbox
 
@@ -20,10 +21,11 @@ public class Model: ObservableObject {
 	@Published public var error: IdentifiableError?
 	@Published public private(set) var isReadStatuses: [URL: Bool]
 	
-	var task: URLSessionDataTask?
-	public init() {
-		self.isReadStatuses = UserDefaults.standard.data(forKey: "isReadStatuses")
-			.flatMap { try? JSONDecoder().decode([URL: Bool].self, from: $0) } ?? [:]
+	var task: AnyCancellable?
+	let services: Services
+	public init(services: Services) {
+		self.services = services
+		self.isReadStatuses = services.keyValueService[key: "isReadStatuses", type: [URL: Bool].self] ?? [:]
 		reload()
 	}
 	
@@ -31,12 +33,12 @@ public class Model: ObservableObject {
 		var statuses = isReadStatuses
 		statuses[url] = value
 		isReadStatuses = statuses
-		UserDefaults.standard.set(try? JSONEncoder().encode(isReadStatuses), forKey: "isReadStatuses")
+		services.keyValueService[key: "isReadStatuses", type: [URL: Bool].self] = isReadStatuses
 	}
 	
 	public func reload() {
 		let request = URLRequest(url: URL(string: "https://www.cocoawithlove.com/feed.json")!)
-		task = URLSession.shared.dataTask(with: request) { data, response, error in
+		task = services.networkService.fetchData(with: request) { data, response, error in
 			do {
 				if let error = error { throw error }
 				let feed = try JSONDecoder().decode(Feed.self, from: data ?? Data())
@@ -45,6 +47,5 @@ public class Model: ObservableObject {
 				DispatchQueue.main.async { self.error = IdentifiableError(underlying: error) }
 			}
 		}
-		task?.resume()
 	}
 }

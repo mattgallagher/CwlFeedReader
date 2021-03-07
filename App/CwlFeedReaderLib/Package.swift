@@ -9,13 +9,26 @@ let package = Package(
 	products: [
 		.library(
 			name: "CwlFeedReaderLib",
-			targets: ["Model", "Toolbox", "ViewToolbox"]
+			targets: ["Model", "ServiceImplementations", "Toolbox", "ViewToolbox"]
 		),
+		.library(
+			name: "MockServiceImplementations",
+			targets: ["MockServiceImplementations"]
+		)
 	],
 	targets: [
 		.target(
+			name: "MockServiceImplementations",
+			dependencies: ["Model", "Toolbox"],
+			resources: [.process("Fixtures")]
+		),
+		.target(
 			name: "Model",
 			dependencies: ["Toolbox"]
+		),
+		.target(
+			name: "ServiceImplementations",
+			dependencies: ["Model", "Toolbox"]
 		),
 		.target(
 			name: "Toolbox",
@@ -27,7 +40,7 @@ let package = Package(
 		),
 		.testTarget(
 			name: "ModelTests",
-			dependencies: ["Model", "Toolbox"]
+			dependencies: ["MockServiceImplementations", "Model", "Toolbox"]
 		)
 	]
 )
