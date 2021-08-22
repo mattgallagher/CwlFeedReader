@@ -5,7 +5,7 @@ public protocol NetworkService {
 	func fetchData(with: URLRequest, handler: @escaping (Data?, URLResponse?, Error?) -> Void) -> AnyCancellable
 }
 
-public protocol KeyValueService: class {
+public protocol KeyValueService: AnyObject {
 	subscript<C: Codable>(key key: String, type type: C.Type) -> C? { get set }
 }
 
